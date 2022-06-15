@@ -12,7 +12,7 @@ type UserModel struct {
 	ID        string    `json:"id" gorm:"primary_key"`
 	FirstName string    `json:"first_name" gorm:"type:varchar; not null"`
 	LastName  string    `json:"last_name" gorm:"type:varchar; not null"`
-	Email     string    `json:"email" gorm:"type:varchar; not null"`
+	Email     string    `json:"email" gorm:"type:varchar; unique; not null"`
 	Password  string    `json:"password" gorm:"type:varchar; not null"`
 	Role      string    `json:"role" gorm:"type:varchar; not null"`
 	Active    bool      `json:"active" gorm:"type:boolean; not null"`
